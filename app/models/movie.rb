@@ -3,5 +3,5 @@ class Movie < ApplicationRecord
 
   has_many :characters, dependent: :destroy
   
-  has_many :actors, dependent: :destroy
+  has_many :actors
 end
