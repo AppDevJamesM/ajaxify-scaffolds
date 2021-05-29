@@ -20,6 +20,16 @@
         <%= form.label :title %>
         <%= form.text_field :title %>
       </td>
+      
+      <td>
+        <%= form.label :description %>
+        <%= form.text_area :description %>
+      </td>
+      
+      <td>
+        <%= form.label :duration %>
+        <%= form.number_field :duration %>
+      </td>
 
       <td>
         <%= form.label :year %>
@@ -29,16 +39,6 @@
       <td>
         <%= form.label :director_id %>
         <%= form.collection_select :director_id, Director.order(:name), :id, :name %>
-      </td>
-
-      <td>
-        <%= form.label :description %>
-        <%= form.text_area :description %>
-      </td>
-
-      <td>
-        <%= form.label :duration %>
-        <%= form.number_field :duration %>
       </td>
 
       <td class="actions">

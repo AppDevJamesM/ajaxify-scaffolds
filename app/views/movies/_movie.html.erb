@@ -1,9 +1,9 @@
 <tr id="<%= dom_id(movie) %>" class="list-group-item">
         <td><%= movie.title %></td>
         <td><%= movie.description %></td>
-        <td><%= movie.duration %></td>
+        <td><%= movie.duration %> minutes</td>
         <td><%= movie.year %></td>
-        <td><%= movie.director_id %></td>
+        <td><%= Director.where(id: movie.director_id).first.name %></td>
         <td><%= link_to 'Show', movie %></td>
         <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
         <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' }, remote: true %></td>
